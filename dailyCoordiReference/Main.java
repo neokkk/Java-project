@@ -35,15 +35,14 @@ public class Main {
 			System.out.println("3. 하의");
 			System.out.println("0. 종료");
 			
-			int userMenu;
+			int userClothes;
 			
-			// 메뉴 정보 받기 
-			try { 
-				userMenu = scan.nextInt();
-            } catch(Exception e) {
-                System.out.println("0 ~ 3 까지의 숫자를 입력해주세요");
-                continue;
-            }
+			// 의상 정보 받기 
+			try { userClothes = scan.nextInt(); }
+			catch (Exception e) {
+				System.out.println("0 ~ 3 까지의 숫자를 입력해주세요");
+				continue;
+			}
 			
 			// 인스턴스 생성하기
 			Outer outer = new Outer();
@@ -53,7 +52,7 @@ public class Main {
 			// 값 저장용 변수 
 			String tmp;
 			
-			switch(userMenu) {
+			switch(userClothes) {
 				// 아우터 선택 
 				case 1 : 
 					if (scanTemp < 5) { // 5°C 미만일 경우 
@@ -119,12 +118,12 @@ public class Main {
 					System.out.println("프로그램을 종료합니다.");
 					tOf = false;
 					break;
-					
+				
+				// 
 				default :
 					System.out.println("0 ~ 3 까지의 숫자를 입력해주세요.");
 					break;
 			} // switch end 
 		} // while end
-	} 
-
-}
+	} // main() end
+} // Main() end
